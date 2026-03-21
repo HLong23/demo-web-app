@@ -6,7 +6,8 @@
     <style>
         table, tr, th, td {
             border: solid black;
-
+            margin: 0;
+            padding: 0;
         }
     </style>
     <script type="module" src="main.js"></script>
@@ -16,6 +17,12 @@
 <button onclick="addUser()"> add user</button>
 
 <h1> List user </h1>
+
+<label>
+    <input id="searchUser" placeholder="Nhập từ khoá tìm kiếm">
+</label>
+<br/>
+<br/>
 <table>
     <tr>
         <th>ID</th>
