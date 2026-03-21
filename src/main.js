@@ -1,4 +1,4 @@
-import user_data from "./resource/database/user.json" with { type: "json" };
+import user_data from "./resource/database/client.json" with { type: "json" };
 
 let userRepo = [...user_data];
 
@@ -9,8 +9,11 @@ function renderUserList(userRepo) {
         let currentUser = userRepo[i];
         let currentContent =
             "<tr>\n" +
-            "        <td>" + currentUser.username + "</td>\n" +
-            "        <td>" + currentUser.password + "</td>\n" +
+            "        <td>" + currentUser.id + "</td>\n" +
+            "        <td>" + currentUser.name + "</td>\n" +
+            "        <td>" + currentUser.birthYear + "</td>\n" +
+            "        <td>" + currentUser.province + "</td>\n" +
+            "        <td>" + currentUser.city + "</td>\n" +
             "</tr>";
         content += currentContent;
     }

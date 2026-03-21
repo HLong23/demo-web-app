@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Nguyễn Văn An", "birthYear": 2000, "province": "Hà Nội", "city": "Hoàn Kiếm" },
+  { "id": 2, "name": "Trần Thị Bình", "birthYear": 1998, "province": "Hà Nội", "city": "Cầu Giấy" },
+  { "id": 3, "name": "Lê Văn Cường", "birthYear": 2002, "province": "Đà Nẵng", "city": "Hải Châu" },
+  { "id": 4, "name": "Phạm Thị Dung", "birthYear": 1995, "province": "Hồ Chí Minh", "city": "Quận 1" },
+  { "id": 5, "name": "Hoàng Văn Em", "birthYear": 2001, "province": "Hải Phòng", "city": "Ngô Quyền" },
+  { "id": 6, "name": "Đỗ Thị Hoa", "birthYear": 1999, "province": "Hà Nội", "city": "Đống Đa" },
+  { "id": 7, "name": "Nguyễn Văn Khang", "birthYear": 2003, "province": "Đà Nẵng", "city": "Sơn Trà" },
+  { "id": 8, "name": "Trần Minh Long", "birthYear": 1997, "province": "Hồ Chí Minh", "city": "Quận 7" }
+]
