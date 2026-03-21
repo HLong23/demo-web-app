@@ -39,8 +39,9 @@ const debounceSearch = debounce((keyword) => {
 
 function removeVietnameseTones(str) {
     let rs =  str
-        .normalize("NFD") // tách dấu ra khỏi chữ
-        .replace(/[\u0300-\u036f]/g, "") // xoá dấu
+        .normalize("NFD")// tách dấu ra khỏi chữ
+        .replace(/[\u0300-\u036f]/g, "") // xoá dấu toàn bộ
+        // .replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "") chỉ xoá sắc huyền hỏi ngã nặng
         .replace(/đ/g, "d")
         .replace(/Đ/g, "D")
         .toLowerCase();
