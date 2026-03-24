@@ -1,10 +1,10 @@
 import user_data from "./resource/database/client.json" with { type: "json" };
 
 let userRepo = [...user_data];
+let userTableBodyHtml = document.getElementById("userList");
 
 function renderUserList(userRepo) {
     console.log(userRepo);
-    let userTableBodyHtml = document.getElementById("userList");
     let content = "";
     for (let i = 0; i < userRepo.length; i++) {
         let currentUser = userRepo[i];
@@ -15,6 +15,7 @@ function renderUserList(userRepo) {
             "        <td>" + currentUser.birthYear + "</td>\n" +
             "        <td>" + currentUser.province + "</td>\n" +
             "        <td>" + currentUser.city + "</td>\n" +
+            "        <td><button onclick='deleteUser(event.currentTarget.parentNode.parentNode)'>Delete</button></td>\n" +
             "</tr>";
         content += currentContent;
     }
@@ -66,9 +67,15 @@ function searchUser(keyword) {
     renderUserList(matchingUsers);
 }
 
-function deleteUser() {
-    userRepo.pop();
-    renderUserList(userRepo);
+function deleteUser(eventTarget) {
+    let currentId = eventTarget.firstElementChild.innerHTML;
+    let currentIndex = userRepo.findIndex(user => user.id === currentId);
+    userRepo.splice(currentIndex, 1);
+    console.log(userRepo);
+    userTableBodyHtml.removeChild(eventTarget);
+
+    // userRepo.pop();
+    // renderUserList(userRepo);
 }
 
 function addUser() {
@@ -85,5 +92,5 @@ function addUser() {
 
 window.deleteUser = deleteUser;
 window.addUser = addUser;
-// window.searchUser = searchUser;
+window.deleteUser = deleteUser;
 renderUserList(userRepo);
